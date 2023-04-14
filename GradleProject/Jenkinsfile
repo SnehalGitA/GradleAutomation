@@ -10,8 +10,9 @@ pipeline {
     }
 	
 	post {
+		always{
 			emailext body: 'Summary', subject: 'GIT Pipeline Status', to: 'snehal.2023change@gmail.com'
-			
 		}
+	}
     
     
