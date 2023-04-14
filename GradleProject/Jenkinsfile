@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+	
+	post {
+			emailext body: 'Summary', subject: 'GIT Pipeline Status', to: 'snehal.2023change@gmail.com'
+			
+		}
+    
+    
